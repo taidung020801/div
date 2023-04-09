@@ -8,6 +8,7 @@ export 'screen/screen2.dart';
 
 //router
 export 'router/router.dart';
+export 'router/router_config.dart';
 
 //các function tĩnh
 export 'static/static_function.dart';
