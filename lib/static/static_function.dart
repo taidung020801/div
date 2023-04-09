@@ -3,8 +3,8 @@ class StaticFunction{
   static Function? goRoot;
 
   static void set({
-    Function? goRoot
+    Function? onGoRoot
   }){
-    goRoot = goRoot;
+    goRoot = onGoRoot;
   }
 }

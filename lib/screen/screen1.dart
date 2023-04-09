@@ -13,7 +13,7 @@ class _Screen1State extends State<Screen1> {
   final String title = "Màn hình phép chia 1";
   static const String content = "Đây là màn hình phép chia 1";
 
-  void onClick() async {
+  void _onClick() async {
     print(StaticFunction);
     if(StaticFunction.goRoot != null){
       StaticFunction.goRoot!();
@@ -22,9 +22,16 @@ class _Screen1State extends State<Screen1> {
     }
   }
 
+  Future<bool> _onWillPop() async {
+    Navigator.pop(context);
+    return false;
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return WillPopScope(
+      onWillPop: _onWillPop,
+      child: Scaffold(
       appBar: AppBar(
         title: Text(title),
       ),
@@ -37,13 +44,14 @@ class _Screen1State extends State<Screen1> {
                 primary: Colors.blue,
               ),
               onPressed: () {
-                onClick();
+                _onClick();
               },
               child: Text('Về lại trang gốc'),
             ),
           ],
         ),
       )// This trailing comma makes auto-formatting nicer for build methods.
+    )
     );
   }
 }
