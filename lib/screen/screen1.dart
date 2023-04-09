@@ -13,7 +13,8 @@ class _Screen1State extends State<Screen1> {
   final String title = "Màn hình phép chia 1";
   static const String content = "Đây là màn hình phép chia 1";
 
-  void onClick() async {  
+  void onClick() async {
+    print(StaticFunction);
     if(StaticFunction.goRoot != null){
       StaticFunction.goRoot!();
     }else{
