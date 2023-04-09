@@ -1,0 +1,4 @@
+#Sun Apr 09 11:46:05 ICT 2023
+base.0=/Volumes/MAC OS - Data/fluttter demo/demo_multi_module/div/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
