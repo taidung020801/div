@@ -14,7 +14,7 @@ class _Screen2State extends State<Screen2> {
   static const String content = "Đây là màn hình phép chia 2";
 
   void _onClick() async {
-    print(StaticFunction);
+    print(StaticFunction.goRoot);
     if(StaticFunction.goRoot != null){
       StaticFunction.goRoot!();
     }else{
@@ -24,6 +24,7 @@ class _Screen2State extends State<Screen2> {
 
   Future<bool> _onWillPop() async {
     Navigator.pop(context);
+    print('_onWillPop');
     return false;
   }
 
